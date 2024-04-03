@@ -1,0 +1,33 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+  "title": 123,
+  "details": null,
+  "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/68f1a04a-6086-4e17-b434-ae84d68f5446/attendees
+Content-Type: application/json
+
+{
+  "name": "Ryan",
+  "email": "ryandvl@ryandvl.com"
+}
+
+###
+
+GET http://localhost:3333/events/68f1a04a-6086-4e17-b434-ae84d68f5446
+
+###
+
+GET http://localhost:3333/attendees/3/badge
+###
+
+GET http://localhost:3333/attendees/4/check-in
+
+###
+
+GET http://localhost:3333/events/68f1a04a-6086-4e17-b434-ae84d68f5446/attendees?query=diego
